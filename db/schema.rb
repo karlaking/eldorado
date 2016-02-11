@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160209032300) do
     t.integer  "elevation"
     t.string   "datetime"
     t.text     "description"
+    t.text     "img_url"
     t.float    "longitude"
     t.float    "latitude"
     t.datetime "created_at",  null: false

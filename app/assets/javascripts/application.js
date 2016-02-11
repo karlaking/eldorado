@@ -9,8 +9,9 @@ $(document).ready(function(){
           'marker-color': '#cc33ff',
           'marker-symbol': 'marker-stroked'
         }),
-      }).bindPopup('<p>'+ point.point_num + '</p>' + '<p>' + "Elevation:" + point.elevation + '</p>'+ '<p>' + point.description + '</p>' +'<img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Nao_robot.jpg" height="300" width="260" />',
+      }).bindPopup('<p>'+ '<span style="font-size: 2em;">' + point.point_num + '</span>'+ '</p>' + '<p>' +'<span style="font-size: .8em;">' + "Elevation:" + point.elevation + '</p>' + '</span>'+'<img src=point.img_url/>' + '<p>' + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." + '</p>',
       {autoPanPadding: new L.Point(0, 50)}).addTo(map);
     });
   //  })
 });
+
