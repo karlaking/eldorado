@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*sample css to include
+.page-header {
+  padding-bottom: 50px;
+  padding-left: 50px;
+  text-align: center;
+  font-size: 6em;
+  font-family: 'Pacifico', cursive;
+}
+a:link {
+    text-decoration: none;
+    color: #000;
+}
+.product-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+.product-price {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+.product-description {
+  padding-top: 50px;
+}
+*/
