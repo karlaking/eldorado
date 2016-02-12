@@ -16,6 +16,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /*sample css to include
 .page-header {
   padding-bottom: 50px;
@@ -41,3 +42,4 @@ a:link {
   padding-top: 50px;
 }
 */
+
