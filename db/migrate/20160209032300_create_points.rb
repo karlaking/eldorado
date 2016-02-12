@@ -5,6 +5,7 @@ class CreatePoints < ActiveRecord::Migration
       t.integer :elevation
       t.string :datetime
       t.text :description
+      t.text :img_url
       t.float :longitude
       t.float :latitude
 

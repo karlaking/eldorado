@@ -15,7 +15,8 @@ features.each do |point|
   elevation = point["attributes"]["Elevation"]
   datetime = point["attributes"]["DateTimeS"]
   description = point["attributes"]["Description"]
+  img_url = point["attributes"]["Image"]
   longitude = point["geometry"]['x']
   latitude = point["geometry"]['y']
-  Point.create(point_num: point_num, elevation: elevation, datetime: datetime, description: description, longitude: longitude, latitude: latitude)
+  Point.create(point_num: point_num, elevation: elevation, datetime: datetime, description: description, img_url: img_url, longitude: longitude, latitude: latitude)
 end
