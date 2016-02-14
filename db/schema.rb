@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160209032300) do
 
   create_table "points", force: :cascade do |t|
     t.integer  "point_num"
-    t.integer  "elevation"
+    t.string   "elevation"
     t.string   "datetime"
     t.text     "description"
     t.text     "img_url"
