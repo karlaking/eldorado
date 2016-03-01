@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'mapviewer/index'
 
-  resources :mapviewer
+
+  get 'mapviewer', to: 'mapviewer#index'
+  get 'projects', to: 'projects#index'
+  get 'contact', to: 'contact#index'
+  get 'aboutme', to: 'aboutme#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
