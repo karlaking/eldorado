@@ -1,4 +1,4 @@
-class MapviewerController < ApplicationController
+class EldoradoController < ApplicationController
    def index
     gon.points = Point.all
     p gon.points
