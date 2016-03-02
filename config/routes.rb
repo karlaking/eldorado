@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'mapviewer', to: 'mapviewer#index'
+  get 'eldorado', to: 'eldorado#index'
   get 'projects', to: 'projects#index'
   get 'contact', to: 'contact#index'
   get 'aboutme', to: 'aboutme#index'
