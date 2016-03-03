@@ -11,10 +11,15 @@
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+  <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
 
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
+    .img-profile{height: 400px;}
+    .name{
+      font-size: 20px
+    }
   </style>
 
 </head>
@@ -30,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Welcome</a>
+                <a class="navbar-brand" href="/">Welcome</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,16 +59,16 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <!-- Header -->
+
+   <!-- Header -->
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- <img class="img-responsive" src="cabin.png" alt=""> -->
+                    <img class="img-profile" src="http://chromescraper.com/img/portfolio/cabin.png" alt="">
                     <div class="intro-text">
                         <span class="name">Karla King</span>
-                        <hr class="star-light">
-                        <span class="skills">Remote Sensing - Cartographic Design - Web Development</span>
+                        <span class="skills">Remote Sensing - Web Development - Cartographic Design</span>
                     </div>
                 </div>
             </div>
@@ -71,8 +76,20 @@
     </header>
 
 
-
 <%= yield %>
+
+<footer class="text-center">
+
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Karla King 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 </body>
