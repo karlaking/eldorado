@@ -14,8 +14,41 @@ $(document).ready(function(){
 
     });
   //  })
-  var boundary = L.mapbox.tileLayer('karlaking2.3biknlmc')
-  console.log(boundary)
+    var layers = {
+      Landsat2014: L.mapbox.tileLayer('karlaking2.6d37t8n9', {format: 'png128'}),
+      Landsat2015: L.mapbox.tileLayer('karlaking2.9i6e1tpk', {format: 'png128'}),
+
+  };
+
+  layers.Landsat2014.addTo(map);
+  L.control.layers(layers).addTo(map);
+
 });
+
+var myLayer = gon.points
+myLayer.setGeoJSON(geoJson);
+
+// Listen for individual marker clicks.
+myLayer.on('click',function(e) {
+    // Force the popup closed.
+    e.layer.closePopup();
+
+    var feature = e.layer.feature;
+    var content = '<div><strong>' + feature.properties.title + '</strong>' +
+                  '<p>' + feature.properties.description + '</p></div>';
+
+    info.innerHTML = content;
+});
+
+// Clear the tooltip when map is clicked.
+map.on('move', empty);
+
+// Trigger empty contents when the script
+// has loaded on the page.
+empty();
+
+function empty() {
+  info.innerHTML = '<div><strong>Click a marker</strong></div>';
+  }
 
 
