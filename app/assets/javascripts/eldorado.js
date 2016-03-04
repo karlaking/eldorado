@@ -6,7 +6,7 @@ $(document).ready(function(){
       L.marker([point.latitude, point.longitude], {
         icon: L.mapbox.marker.icon({
           'marker-size': 'large',
-          'marker-color': '#cc33ff',
+          'marker-color': '#e50000',
           'marker-symbol': 'marker-stroked'
         }),
       }).bindPopup('<p>'+ '<span style="font-size: 2em;">' + point.point_num + '</span>'+ '</p>' + '<p>' +'<span style="font-size: .8em;">' + "Elevation: " + point.elevation + '</p>' + '</span>'+'<img src='+point.img_url+'/>' + '<p>' + point.description + '</p>',
@@ -14,8 +14,15 @@ $(document).ready(function(){
 
     });
   //  })
-  var boundary = L.mapbox.tileLayer('karlaking2.3biknlmc')
-  console.log(boundary)
+    var layers = {
+      Landsat2014: L.mapbox.tileLayer('karlaking2.9fwnbjys', {format: 'png128'}),
+      Landsat2015: L.mapbox.tileLayer('karlaking2.du1h8s5z', {format: 'png128'})
+
+  };
+
+  layers.Landsat2015.addTo(map);
+  L.control.layers(layers).addTo(map);
+
 });
 
 
