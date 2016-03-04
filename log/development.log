@@ -20529,3 +20529,505 @@ Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 17:56:38 -0800
 
 
 Started GET "/assets/bootstrap" for ::1 at 2016-03-03 17:56:38 -0800
+
+
+Started GET "/contact" for ::1 at 2016-03-03 18:03:57 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContactController#index as HTML
+  Rendered contact/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 944ms (Views: 934.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/eldorado.self-97720675d0229a8d402ea3721764a1f4c10df98e6e8e7a9d86a975f24864fba1.js?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:03:59 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:04:10 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:04:10 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:04:10 -0800
+
+
+Started GET "/projects" for ::1 at 2016-03-03 18:04:14 -0800
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:04:15 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:04:15 -0800
+
+
+Started GET "/eldorado" for ::1 at 2016-03-03 18:04:19 -0800
+Processing by EldoradoController#index as HTML
+  [1m[35mPoint Load (1.6ms)[0m  SELECT "points".* FROM "points"
+  Rendered eldorado/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 216ms (Views: 166.3ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:04:19 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:04:19 -0800
+
+
+Started GET "/eldorado" for ::1 at 2016-03-03 18:06:19 -0800
+Processing by EldoradoController#index as HTML
+  [1m[36mPoint Load (0.9ms)[0m  [1mSELECT "points".* FROM "points"[0m
+  Rendered eldorado/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 387ms (Views: 379.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/eldorado.self-97720675d0229a8d402ea3721764a1f4c10df98e6e8e7a9d86a975f24864fba1.js?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:06:20 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:06:22 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:06:22 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:06:22 -0800
+
+
+Started GET "/projects" for ::1 at 2016-03-03 18:06:26 -0800
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:06:27 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:06:27 -0800
+
+
+Started GET "/contact" for ::1 at 2016-03-03 18:06:30 -0800
+Processing by ContactController#index as HTML
+  Rendered contact/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:06:31 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:06:31 -0800
+
+
+Started GET "/contact" for ::1 at 2016-03-03 18:06:41 -0800
+Processing by ContactController#index as HTML
+  Rendered contact/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/eldorado.self-97720675d0229a8d402ea3721764a1f4c10df98e6e8e7a9d86a975f24864fba1.js?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-03 18:06:41 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:06:42 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:06:42 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:06:55 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:06:55 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:06:55 -0800
+
+
+Started GET "/projects" for ::1 at 2016-03-03 18:06:57 -0800
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:06:58 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:06:58 -0800
+
+
+Started GET "/eldorado" for ::1 at 2016-03-03 18:07:08 -0800
+Processing by EldoradoController#index as HTML
+  [1m[35mPoint Load (0.8ms)[0m  SELECT "points".* FROM "points"
+  Rendered eldorado/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 96ms (Views: 87.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:07:09 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:07:09 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:08:30 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 414ms (Views: 413.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:08:31 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:08:31 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:09:22 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 435ms (Views: 434.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/eldorado.self-97720675d0229a8d402ea3721764a1f4c10df98e6e8e7a9d86a975f24864fba1.js?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:09:22 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:09:23 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:10:17 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 194ms (Views: 192.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/eldorado.self-97720675d0229a8d402ea3721764a1f4c10df98e6e8e7a9d86a975f24864fba1.js?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:10:17 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:11:16 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/eldorado.self-97720675d0229a8d402ea3721764a1f4c10df98e6e8e7a9d86a975f24864fba1.js?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-03 18:11:16 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:11:17 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:11:17 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-03 18:11:53 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/eldorado.self-97720675d0229a8d402ea3721764a1f4c10df98e6e8e7a9d86a975f24864fba1.js?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-03 18:11:53 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 18:11:54 -0800
