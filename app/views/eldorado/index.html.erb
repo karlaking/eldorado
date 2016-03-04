@@ -8,15 +8,18 @@
 }
 
 #place-holder{
-  height: 700px;
+  height: 800px;
 }
 
 #map-title{
   font-family:"Julius Sans One"
 }
 
-body{
-  background-color:#e6ffff
+.map-descript{
+  font-family:"Fira Sans";
+  font-size: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 #map-title{
@@ -28,9 +31,6 @@ div.leaflet-popup{
   width: 600px;
 }
 
-p{
-  width: 600px;
-}
 img {
   max-width:200%;
   }
@@ -49,17 +49,22 @@ img {
 <div id="place-holder">
 
 </div>
-<div class="text-descript">
-    <p>This is a visual display of my thesis research studying a method of forest change detection using satellite imagery. I am still working on synthesizing the data and updating the display here. The technique uses traditional remote sensing methods to identify areas where land cover has surpassed a threshold of change from 2014 to 2015 in Eldorado National Forest, located in the Sierra Nevada Mountain Range of California.
+<div class="map-descript">
+    <p>Disclaimer: Under Development</p>
+    <p>This is a visual display of my thesis research studying a method of forest change detection using satellite imagery. I am still working on synthesizing the data and updating the display here. The technique uses traditional remote sensing methods to identify areas where land cover has surpassed a threshold of change from 2014 to 2015 in Eldorado National Forest, located in the Sierra Nevada Mountain Range of California.</p>
+    <br>
     <p>Methods and data include:</p>
     <ul>
-      <li>Landsat 8 ETM Images transformed using The Tasseled Cap Transformation</li>
+      <li>Landsat 8 ETM Images transformed using The Tasseled Cap Algorithm</li>
       <li>Image subtraction and threshold setting to identify decline in vigor</li>
       <li>Ground-truth data collection in the field to corroborate results</li>
     </ul>
+    <br>
     <p> A unique aspect of the project was using a drone to ground-truth the results. These images can be viewed in each marker's pop-up.</p>
     <p> Datasets to be added include: The binary classification of damaged areas, the USDA Forest Service analysis over this same time period for comparison, and charts exhibiting the spectral distribution in the classification and the accuracy assessment results</p>
+    <br>
     <p>More to Come!</p>
+    <br>
 </div>
 
 
