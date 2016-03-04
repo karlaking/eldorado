@@ -28205,3 +28205,155 @@ Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 23:47:46 -0800
 
 
 Started GET "/assets/bootstrap" for ::1 at 2016-03-03 23:47:46 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'points'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 1], ["elevation", "5,413 ft."], ["datetime", "2015-09-05T23:16:38Z"], ["description", "Sparse vegetation due to recently clear cut within past ten years. Dead material covering forest floor. Primarily immature trees and disturbed forest.  Species encountered on transects: Pinus ponderosa(2), Calocedrus decurrens "], ["img_url", "http://i.imgur.com/dQXO9uW.jpg"], ["longitude", -120.34290999999996], ["latitude", 38.83826200000004], ["created_at", "2016-03-04 08:04:25.039559"], ["updated_at", "2016-03-04 08:04:25.039559"]]
+  [1m[35m (15.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 3], ["elevation", "3,368 ft."], ["datetime", "2015-09-06T19:47:17Z"], ["description", "Established mixed pine forest with underbrush. Some Oak trees present. Granite exposed. Adjacent to river and U.S. Route 50.  Species encountered on transects: Pinus ponderosa(2), Calocedrus decurrens"], ["img_url", "http://i.imgur.com/McXmlVM.jpg"], ["longitude", -120.37902099999997], ["latitude", 38.76642400000003], ["created_at", "2016-03-04 08:04:25.081645"], ["updated_at", "2016-03-04 08:04:25.081645"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 4], ["elevation", "6,765 ft."], ["datetime", "2015-09-06T21:42:20Z"], ["description", "Healthy Lodgepole Pine and White Fir trees within mixed age forest. Species encountered on transects: Abies concolor (6)"], ["img_url", "http://i.imgur.com/fkpbYWH.jpg"], ["longitude", -120.23232399999995], ["latitude", 38.83854400000007], ["created_at", "2016-03-04 08:04:25.084145"], ["updated_at", "2016-03-04 08:04:25.084145"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 5], ["elevation", "6,227 ft."], ["datetime", "2015-09-07T16:30:49Z"], ["description", "Mature mixed pine forest forest. Species encountered on transects: Calocedrus decurrens"], ["img_url", "http://i.imgur.com/chJHWsm.jpg"], ["longitude", -120.20087699999999], ["latitude", 38.664059000000066], ["created_at", "2016-03-04 08:04:25.086261"], ["updated_at", "2016-03-04 08:04:25.086261"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 6], ["elevation", "5,702 ft."], ["datetime", "2015-09-07T17:30:55Z"], ["description", "Mixed age pine forest with granite and manzanita brush. Species encountered on transects: Abies concolor, Pinus ponderosa, Calocedrus decurrens(3), Pinus jeffreyi"], ["img_url", "http://i.imgur.com/HanIgUa.jpg"], ["longitude", -120.21941499999997], ["latitude", 38.715382000000034], ["created_at", "2016-03-04 08:04:25.088453"], ["updated_at", "2016-03-04 08:04:25.088453"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 7], ["elevation", "6,919 ft."], ["datetime", "2015-09-07T18:32:38Z"], ["description", "Barren rock immediately surrounding point of interest, sparse old growth trees in isolation. Area has been clear cut in recent time. Species encountered on transects: Pinus attenuata"], ["img_url", "http://i.imgur.com/t5Y0Oio.jpg"], ["longitude", -120.22997199999998], ["latitude", 38.65616000000006], ["created_at", "2016-03-04 08:04:25.090668"], ["updated_at", "2016-03-04 08:04:25.090668"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 8], ["elevation", "5,580 ft."], ["datetime", "2015-09-07T19:15:50Z"], ["description", "Recently cleared area with mixed oak trees and pine forest remaining. Plenty of shrubs and grasses. Species encountered on transects: Quercus kelloggii, Calocedrus decurrens(4), Abies magnifica, Abies concolor "], ["img_url", "http://i.imgur.com/OaGdvlN.jpg"], ["longitude", -120.40253099999995], ["latitude", 38.70034300000003], ["created_at", "2016-03-04 08:04:25.093470"], ["updated_at", "2016-03-04 08:04:25.093470"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 9], ["elevation", "5,347 ft."], ["datetime", "2015-09-07T20:52:01Z"], ["description", "Young trees, second growth within the last seventy years. Dense pine immature trees competing for sunlight. Lots of exposed underbrush in immediate area. Species encountered on transects: Pseudotsuga menziesii, Calocedrus decurrens"], ["img_url", "http://i.imgur.com/FjMYjlN.jpg"], ["longitude", -120.417217], ["latitude", 38.668191000000036], ["created_at", "2016-03-04 08:04:25.095642"], ["updated_at", "2016-03-04 08:04:25.095642"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 10], ["elevation", "4,717 ft."], ["datetime", "2015-09-07T21:53:05Z"], ["description", "Mixed age pine forest with lots of underbrush. Species encountered on transects: Calocedrus decurrens, Pseudotsuga menziesii(2), Aegopodium podagraria"], ["img_url", "http://i.imgur.com/tY02TXI.jpg"], ["longitude", -120.45375899999999], ["latitude", 38.686905000000024], ["created_at", "2016-03-04 08:04:25.097644"], ["updated_at", "2016-03-04 08:04:25.097644"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 11], ["elevation", "6,000 ft."], ["datetime", "2015-09-07T22:43:22Z"], ["description", "On top of ridge. Visible fire in recent history. Partial canopy fire leaving some trees standing among badly burned trees and hanging snags. Species encountered on transect: Abies concolor"], ["img_url", "http://i.imgur.com/TAYj6e7.jpg"], ["longitude", -120.32708399999996], ["latitude", 38.685933000000034], ["created_at", "2016-03-04 08:04:25.099860"], ["updated_at", "2016-03-04 08:04:25.099860"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 12], ["elevation", "4,630 ft."], ["datetime", "2015-09-07T23:22:13Z"], ["description", "Few old growth trees among dense younger, shorter pine and hardwood forest. Species encounter on transect: Calocedrus decurrens(3), Quercus kelloggii, Pinus lambertiana"], ["img_url", "http://i.imgur.com/mfPwlPn.jpg"], ["longitude", -120.46557599999994], ["latitude", 38.71993400000008], ["created_at", "2016-03-04 08:04:25.102153"], ["updated_at", "2016-03-04 08:04:25.102153"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 13], ["elevation", "3,392 ft."], ["datetime", "2015-09-25T20:59:08Z"], ["description", "Logged area, with small sugar pines and douglas fir pine trees. Species encountered on transect: Pseudotsuga menziesii"], ["img_url", "http://i.imgur.com/J8jKpQb.jpg"], ["longitude", -120.70410599999997], ["latitude", 39.00068700000003], ["created_at", "2016-03-04 08:04:25.104282"], ["updated_at", "2016-03-04 08:04:25.104282"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 14], ["elevation", "4,002 ft."], ["datetime", "2015-09-25T21:43:52Z"], ["description", "Brush and immature pine tree dominate with thick grove of manzanita covering the forest floor. Species encountered on transects: Pinus ponderosa(3)"], ["img_url", "http://i.imgur.com/zXymRYm.jpg"], ["longitude", -120.598908], ["latitude", 38.98689500000006], ["created_at", "2016-03-04 08:04:25.107096"], ["updated_at", "2016-03-04 08:04:25.107096"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 15], ["elevation", "4,776  ft."], ["datetime", "2015-09-25T22:29:36Z"], ["description", "Area devastated by total canopy fire. No growing trees in sight in any direction. Minor signs of brush regrowth showing."], ["img_url", "http://i.imgur.com/tFhhQmu.jpg"], ["longitude", -120.54096499999997], ["latitude", 38.94928200000004], ["created_at", "2016-03-04 08:04:25.109296"], ["updated_at", "2016-03-04 08:04:25.109296"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 16], ["elevation", "5,495 ft."], ["datetime", "2015-09-25T23:27:32Z"], ["description", "Mixed Fir and pine forest with hardwoods. Borders clear cut area. Nearly half of land cover exposed ground. Species encountered on transect: Pinus ponderosa (3), Pinus contorta,  Calocedrus decurrens, Abies concolor"], ["img_url", "http://i.imgur.com/EOLtpYY.jpg"], ["longitude", -120.41907099999997], ["latitude", 38.94228700000008], ["created_at", "2016-03-04 08:04:25.111393"], ["updated_at", "2016-03-04 08:04:25.111393"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 17], ["elevation", "6,341 ft."], ["datetime", "2015-09-26T00:09:59Z"], ["description", "Point taken on beach extending far into the interior of Boone Lake Reservoir. Area exposed due to extreme drought. Granite rocks present with lack of vegetation."], ["img_url", "http://i.imgur.com/OkinmhU.jpg"], ["longitude", -120.32217399999996], ["latitude", 38.99679000000003], ["created_at", "2016-03-04 08:04:25.113521"], ["updated_at", "2016-03-04 08:04:25.113521"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 19], ["elevation", "7,444 ft."], ["datetime", "2015-09-27T19:48:16Z"], ["description", "In very remote region near Bear Lake Reservoir. Mixed age healthy forest with exposed granite and lots of exposed brush. Sign of stratified forest. No trees encountered on transects."], ["img_url", "http://i.imgur.com/lJ2ZQ8U.jpg"], ["longitude", -120.18779699999999], ["latitude", 38.56037100000003], ["created_at", "2016-03-04 08:04:25.116284"], ["updated_at", "2016-03-04 08:04:25.116284"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 20], ["elevation", "4,084 ft"], ["datetime", "2015-09-27T21:05:04Z"], ["description", "Captured at Salt Lake Springs Reservoir to demonstrate extreme drought. Water level well below normal levels allowing access to interior of reservoir. Near southern boundary of Eldorado National Forest boundary"], ["img_url", "http://i.imgur.com/DFXBsZa.jpg"], ["longitude", -120.21498299999996], ["latitude", 38.50030700000008], ["created_at", "2016-03-04 08:04:25.118291"], ["updated_at", "2016-03-04 08:04:25.118291"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 21], ["elevation", "6,433 ft."], ["datetime", "2015-09-27T22:15:39Z"], ["description", "Taken near fire station at intersection of Forest Service road and Route 88. Young pine forest primarily exposed soil. Area apparently disturbed by clear cutting and/ or insect or fire presence. Species encountered on transect: Abies magnifica "], ["img_url", "http://i.imgur.com/XdW2tFd.jpg"], ["longitude", -120.31745699999999], ["latitude", 38.546125000000075], ["created_at", "2016-03-04 08:04:25.120278"], ["updated_at", "2016-03-04 08:04:25.120278"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 22], ["elevation", "8,828 ft."], ["datetime", "2015-09-27T23:01:18Z"], ["description", "Above tree line along Pacific Coast Trail near eastern boundary of Eldorado National Forest. Little to no vegetation present including grass. Lots of rocks, not necessarily granite. No soil."], ["img_url", "http://i.imgur.com/X2EnV6H.jpg"], ["longitude", -120.12344599999994], ["latitude", 38.69444400000003], ["created_at", "2016-03-04 08:04:25.122423"], ["updated_at", "2016-03-04 08:04:25.122423"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 23], ["elevation", "3,562 ft."], ["datetime", "2015-09-27T23:47:07Z"], ["description", "Regenerated pine forest with manzanita brush, pine needles, and deuterium covering forest floor. Species encountered on transects: Pinus ponderosa"], ["img_url", "http://i.imgur.com/xymklVH.jpg"], ["longitude", -119.99615099999994], ["latitude", 38.698803000000055], ["created_at", "2016-03-04 08:04:25.124960"], ["updated_at", "2016-03-04 08:04:25.124960"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 24], ["elevation", "3,562 ft."], ["datetime", "2015-10-04T21:12:05Z"], ["description", "Regenerated pine forest with manzanita brush, pine needles, and deuterium covering forest floor. Species encountered on transects: Pinus ponderosa"], ["img_url", "http://i.imgur.com/jeFHacn.jpg"], ["longitude", -120.75873099999995], ["latitude", 38.91911700000003], ["created_at", "2016-03-04 08:04:25.127032"], ["updated_at", "2016-03-04 08:04:25.127032"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 25], ["elevation", "3,023 ft."], ["datetime", "2015-10-04T22:44:09Z"], ["description", "Mountain Hemlocks in valley by river bank. Lots of rocks and broadleaf trees present. Trees encountered on transect: Tsuga mertensiana"], ["img_url", "http://i.imgur.com/8dzHl1L.jpg"], ["longitude", -120.48371999999995], ["latitude", 38.76751100000007], ["created_at", "2016-03-04 08:04:25.129075"], ["updated_at", "2016-03-04 08:04:25.129075"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-03-04 00:04:40 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/aboutme
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutme" for ::1 at 2016-03-04 00:04:40 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 1342ms (Views: 1340.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-04 00:04:42 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-04 00:04:42 -0800
+
+
+Started GET "/projects" for ::1 at 2016-03-04 00:04:45 -0800
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-04 00:04:45 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-04 00:04:45 -0800
+
+
+Started GET "/eldorado" for ::1 at 2016-03-04 00:04:48 -0800
+Processing by EldoradoController#index as HTML
+  [1m[35mPoint Load (1.6ms)[0m  SELECT "points".* FROM "points"
+  Rendered eldorado/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 185ms (Views: 94.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-04 00:04:48 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-04 00:04:48 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-04 00:04:57 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 115ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-04 00:04:58 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-04 00:04:58 -0800
+
+
+Started GET "/contact" for ::1 at 2016-03-04 00:04:59 -0800
+Processing by ContactController#index as HTML
+  Rendered contact/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-04 00:05:00 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-04 00:05:00 -0800
