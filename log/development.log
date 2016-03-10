@@ -27571,3 +27571,17 @@ Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:24:07 -0800
 
 
 Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:24:07 -0800
+
+
+Started GET "/" for ::1 at 2016-03-10 14:27:55 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EldoradoController#index as HTML
+  [1m[35mPoint Load (2.7ms)[0m  SELECT "points".* FROM "points"
+  Rendered eldorado/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 729ms (Views: 688.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:27:56 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:27:56 -0800
