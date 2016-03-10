@@ -1,4 +1,0 @@
-== Project displaying the results of my thesis research via Ruby on Rails, Mapbox, and Google Earth Engine for the image analysis.
-
-
-
