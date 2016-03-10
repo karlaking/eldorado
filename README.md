@@ -29,7 +29,7 @@ This website was created to make my thesis research more visible. The technique 
 
 ##To run locally via the command line:
 
-1. git clone https://github.com/f-ocal/skylark.git
+1. git clone https://github.com/karlaking/eldorado.git
 2. cd eldorado
 3. bundle install
 4. rake db:create

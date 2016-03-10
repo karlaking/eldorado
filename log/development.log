@@ -27001,3 +27001,523 @@ Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-03 22:54:04 -0800
 
 
 Started GET "/assets/bootstrap" for ::1 at 2016-03-03 22:54:04 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (58.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (18.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'points'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (55.9ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 1], ["elevation", "5,413 ft."], ["datetime", "2015-09-05T23:16:38Z"], ["description", "Sparse vegetation due to recently clear cut within past ten years. Dead material covering forest floor. Primarily immature trees and disturbed forest.  Species encountered on transects: Pinus ponderosa(2), Calocedrus decurrens "], ["img_url", "http://i.imgur.com/dQXO9uW.jpg"], ["longitude", -120.34290999999996], ["latitude", 38.83826200000004], ["created_at", "2016-03-10 22:10:50.523367"], ["updated_at", "2016-03-10 22:10:50.523367"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 3], ["elevation", "3,368 ft."], ["datetime", "2015-09-06T19:47:17Z"], ["description", "Established mixed pine forest with underbrush. Some Oak trees present. Granite exposed. Adjacent to river and U.S. Route 50.  Species encountered on transects: Pinus ponderosa(2), Calocedrus decurrens"], ["img_url", "http://i.imgur.com/McXmlVM.jpg"], ["longitude", -120.37902099999997], ["latitude", 38.76642400000003], ["created_at", "2016-03-10 22:10:50.594838"], ["updated_at", "2016-03-10 22:10:50.594838"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 4], ["elevation", "6,765 ft."], ["datetime", "2015-09-06T21:42:20Z"], ["description", "Healthy Lodgepole Pine and White Fir trees within mixed age forest. Species encountered on transects: Abies concolor (6)"], ["img_url", "http://i.imgur.com/fkpbYWH.jpg"], ["longitude", -120.23232399999995], ["latitude", 38.83854400000007], ["created_at", "2016-03-10 22:10:50.598947"], ["updated_at", "2016-03-10 22:10:50.598947"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 5], ["elevation", "6,227 ft."], ["datetime", "2015-09-07T16:30:49Z"], ["description", "Mature mixed pine forest forest. Species encountered on transects: Calocedrus decurrens"], ["img_url", "http://i.imgur.com/chJHWsm.jpg"], ["longitude", -120.20087699999999], ["latitude", 38.664059000000066], ["created_at", "2016-03-10 22:10:50.601987"], ["updated_at", "2016-03-10 22:10:50.601987"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 6], ["elevation", "5,702 ft."], ["datetime", "2015-09-07T17:30:55Z"], ["description", "Mixed age pine forest with granite and manzanita brush. Species encountered on transects: Abies concolor, Pinus ponderosa, Calocedrus decurrens(3), Pinus jeffreyi"], ["img_url", "http://i.imgur.com/HanIgUa.jpg"], ["longitude", -120.21941499999997], ["latitude", 38.715382000000034], ["created_at", "2016-03-10 22:10:50.604747"], ["updated_at", "2016-03-10 22:10:50.604747"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 7], ["elevation", "6,919 ft."], ["datetime", "2015-09-07T18:32:38Z"], ["description", "Barren rock immediately surrounding point of interest, sparse old growth trees in isolation. Area has been clear cut in recent time. Species encountered on transects: Pinus attenuata"], ["img_url", "http://i.imgur.com/t5Y0Oio.jpg"], ["longitude", -120.22997199999998], ["latitude", 38.65616000000006], ["created_at", "2016-03-10 22:10:50.607145"], ["updated_at", "2016-03-10 22:10:50.607145"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 8], ["elevation", "5,580 ft."], ["datetime", "2015-09-07T19:15:50Z"], ["description", "Recently cleared area with mixed oak trees and pine forest remaining. Plenty of shrubs and grasses. Species encountered on transects: Quercus kelloggii, Calocedrus decurrens(4), Abies magnifica, Abies concolor "], ["img_url", "http://i.imgur.com/OaGdvlN.jpg"], ["longitude", -120.40253099999995], ["latitude", 38.70034300000003], ["created_at", "2016-03-10 22:10:50.609188"], ["updated_at", "2016-03-10 22:10:50.609188"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 9], ["elevation", "5,347 ft."], ["datetime", "2015-09-07T20:52:01Z"], ["description", "Young trees, second growth within the last seventy years. Dense pine immature trees competing for sunlight. Lots of exposed underbrush in immediate area. Species encountered on transects: Pseudotsuga menziesii, Calocedrus decurrens"], ["img_url", "http://i.imgur.com/FjMYjlN.jpg"], ["longitude", -120.417217], ["latitude", 38.668191000000036], ["created_at", "2016-03-10 22:10:50.611169"], ["updated_at", "2016-03-10 22:10:50.611169"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 10], ["elevation", "4,717 ft."], ["datetime", "2015-09-07T21:53:05Z"], ["description", "Mixed age pine forest with lots of underbrush. Species encountered on transects: Calocedrus decurrens, Pseudotsuga menziesii(2), Aegopodium podagraria"], ["img_url", "http://i.imgur.com/tY02TXI.jpg"], ["longitude", -120.45375899999999], ["latitude", 38.686905000000024], ["created_at", "2016-03-10 22:10:50.613348"], ["updated_at", "2016-03-10 22:10:50.613348"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 11], ["elevation", "6,000 ft."], ["datetime", "2015-09-07T22:43:22Z"], ["description", "On top of ridge. Visible fire in recent history. Partial canopy fire leaving some trees standing among badly burned trees and hanging snags. Species encountered on transect: Abies concolor"], ["img_url", "http://i.imgur.com/TAYj6e7.jpg"], ["longitude", -120.32708399999996], ["latitude", 38.685933000000034], ["created_at", "2016-03-10 22:10:50.615888"], ["updated_at", "2016-03-10 22:10:50.615888"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 12], ["elevation", "4,630 ft."], ["datetime", "2015-09-07T23:22:13Z"], ["description", "Few old growth trees among dense younger, shorter pine and hardwood forest. Species encounter on transect: Calocedrus decurrens(3), Quercus kelloggii, Pinus lambertiana"], ["img_url", "http://i.imgur.com/mfPwlPn.jpg"], ["longitude", -120.46557599999994], ["latitude", 38.71993400000008], ["created_at", "2016-03-10 22:10:50.618463"], ["updated_at", "2016-03-10 22:10:50.618463"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 13], ["elevation", "3,392 ft."], ["datetime", "2015-09-25T20:59:08Z"], ["description", "Logged area, with small sugar pines and douglas fir pine trees. Species encountered on transect: Pseudotsuga menziesii"], ["img_url", "http://i.imgur.com/J8jKpQb.jpg"], ["longitude", -120.70410599999997], ["latitude", 39.00068700000003], ["created_at", "2016-03-10 22:10:50.620632"], ["updated_at", "2016-03-10 22:10:50.620632"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 14], ["elevation", "4,002 ft."], ["datetime", "2015-09-25T21:43:52Z"], ["description", "Brush and immature pine tree dominate with thick grove of manzanita covering the forest floor. Species encountered on transects: Pinus ponderosa(3)"], ["img_url", "http://i.imgur.com/zXymRYm.jpg"], ["longitude", -120.598908], ["latitude", 38.98689500000006], ["created_at", "2016-03-10 22:10:50.623389"], ["updated_at", "2016-03-10 22:10:50.623389"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 15], ["elevation", "4,776  ft."], ["datetime", "2015-09-25T22:29:36Z"], ["description", "Area devastated by total canopy fire. No growing trees in sight in any direction. Minor signs of brush regrowth showing."], ["img_url", "http://i.imgur.com/tFhhQmu.jpg"], ["longitude", -120.54096499999997], ["latitude", 38.94928200000004], ["created_at", "2016-03-10 22:10:50.625392"], ["updated_at", "2016-03-10 22:10:50.625392"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 16], ["elevation", "5,495 ft."], ["datetime", "2015-09-25T23:27:32Z"], ["description", "Mixed Fir and pine forest with hardwoods. Borders clear cut area. Nearly half of land cover exposed ground. Species encountered on transect: Pinus ponderosa (3), Pinus contorta,  Calocedrus decurrens, Abies concolor"], ["img_url", "http://i.imgur.com/EOLtpYY.jpg"], ["longitude", -120.41907099999997], ["latitude", 38.94228700000008], ["created_at", "2016-03-10 22:10:50.627510"], ["updated_at", "2016-03-10 22:10:50.627510"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 17], ["elevation", "6,341 ft."], ["datetime", "2015-09-26T00:09:59Z"], ["description", "Point taken on beach extending far into the interior of Boone Lake Reservoir. Area exposed due to extreme drought. Granite rocks present with lack of vegetation."], ["img_url", "http://i.imgur.com/OkinmhU.jpg"], ["longitude", -120.32217399999996], ["latitude", 38.99679000000003], ["created_at", "2016-03-10 22:10:50.629698"], ["updated_at", "2016-03-10 22:10:50.629698"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 19], ["elevation", "7,444 ft."], ["datetime", "2015-09-27T19:48:16Z"], ["description", "In very remote region near Bear Lake Reservoir. Mixed age healthy forest with exposed granite and lots of exposed brush. Sign of stratified forest. No trees encountered on transects."], ["img_url", "http://i.imgur.com/lJ2ZQ8U.jpg"], ["longitude", -120.18779699999999], ["latitude", 38.56037100000003], ["created_at", "2016-03-10 22:10:50.631813"], ["updated_at", "2016-03-10 22:10:50.631813"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 20], ["elevation", "4,084 ft"], ["datetime", "2015-09-27T21:05:04Z"], ["description", "Captured at Salt Lake Springs Reservoir to demonstrate extreme drought. Water level well below normal levels allowing access to interior of reservoir. Near southern boundary of Eldorado National Forest boundary"], ["img_url", "http://i.imgur.com/DFXBsZa.jpg"], ["longitude", -120.21498299999996], ["latitude", 38.50030700000008], ["created_at", "2016-03-10 22:10:50.633837"], ["updated_at", "2016-03-10 22:10:50.633837"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 21], ["elevation", "6,433 ft."], ["datetime", "2015-09-27T22:15:39Z"], ["description", "Taken near fire station at intersection of Forest Service road and Route 88. Young pine forest primarily exposed soil. Area apparently disturbed by clear cutting and/ or insect or fire presence. Species encountered on transect: Abies magnifica "], ["img_url", "http://i.imgur.com/XdW2tFd.jpg"], ["longitude", -120.31745699999999], ["latitude", 38.546125000000075], ["created_at", "2016-03-10 22:10:50.679972"], ["updated_at", "2016-03-10 22:10:50.679972"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 22], ["elevation", "8,828 ft."], ["datetime", "2015-09-27T23:01:18Z"], ["description", "Above tree line along Pacific Coast Trail near eastern boundary of Eldorado National Forest. Little to no vegetation present including grass. Lots of rocks, not necessarily granite. No soil."], ["img_url", "http://i.imgur.com/X2EnV6H.jpg"], ["longitude", -120.12344599999994], ["latitude", 38.69444400000003], ["created_at", "2016-03-10 22:10:50.682047"], ["updated_at", "2016-03-10 22:10:50.682047"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 23], ["elevation", "3,562 ft."], ["datetime", "2015-09-27T23:47:07Z"], ["description", "Regenerated pine forest with manzanita brush, pine needles, and deuterium covering forest floor. Species encountered on transects: Pinus ponderosa"], ["img_url", "http://i.imgur.com/xymklVH.jpg"], ["longitude", -119.99615099999994], ["latitude", 38.698803000000055], ["created_at", "2016-03-10 22:10:50.684173"], ["updated_at", "2016-03-10 22:10:50.684173"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["point_num", 24], ["elevation", "3,562 ft."], ["datetime", "2015-10-04T21:12:05Z"], ["description", "Regenerated pine forest with manzanita brush, pine needles, and deuterium covering forest floor. Species encountered on transects: Pinus ponderosa"], ["img_url", "http://i.imgur.com/jeFHacn.jpg"], ["longitude", -120.75873099999995], ["latitude", 38.91911700000003], ["created_at", "2016-03-10 22:10:50.686292"], ["updated_at", "2016-03-10 22:10:50.686292"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "points" ("point_num", "elevation", "datetime", "description", "img_url", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["point_num", 25], ["elevation", "3,023 ft."], ["datetime", "2015-10-04T22:44:09Z"], ["description", "Mountain Hemlocks in valley by river bank. Lots of rocks and broadleaf trees present. Trees encountered on transect: Tsuga mertensiana"], ["img_url", "http://i.imgur.com/8dzHl1L.jpg"], ["longitude", -120.48371999999995], ["latitude", 38.76751100000007], ["created_at", "2016-03-10 22:10:50.688576"], ["updated_at", "2016-03-10 22:10:50.688576"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-03-10 14:12:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/aboutme
+Completed 302 Found in 37ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutme" for ::1 at 2016-03-10 14:12:11 -0800
+Processing by AboutmeController#index as HTML
+  Rendered aboutme/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 906ms (Views: 905.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-10 14:12:12 -0800
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/eldorado.self-487150b21573790abeab4ee7eb1c5890b2c5bf46edf9d7e439d1242f692cd477.js?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:12:13 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-10 14:13:15 -0800
+
+ActionController::RoutingError (No route matches [GET] "/aboutme"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (66.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (140.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (169.8ms)
+
+
+Started GET "/aboutme" for ::1 at 2016-03-10 14:15:09 -0800
+
+ActionController::RoutingError (No route matches [GET] "/aboutme"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 14:15:15 -0800
+Processing by EldoradoController#index as HTML
+  [1m[35mPoint Load (33.8ms)[0m  SELECT "points".* FROM "points"
+  Rendered eldorado/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 372ms (Views: 311.6ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:15:16 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:15:16 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-10 14:15:32 -0800
+
+ActionController::RoutingError (No route matches [GET] "/aboutme"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 14:15:36 -0800
+Processing by EldoradoController#index as HTML
+  [1m[36mPoint Load (1.4ms)[0m  [1mSELECT "points".* FROM "points"[0m
+  Rendered eldorado/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 160ms (Views: 149.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:15:36 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:15:36 -0800
+
+
+Started GET "/" for ::1 at 2016-03-10 14:18:57 -0800
+Processing by EldoradoController#index as HTML
+  [1m[35mPoint Load (1.4ms)[0m  SELECT "points".* FROM "points"
+  Rendered eldorado/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 192ms (Views: 181.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/eldorado.self-487150b21573790abeab4ee7eb1c5890b2c5bf46edf9d7e439d1242f692cd477.js?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 14:18:58 -0800
+
+
+Started GET "/aboutme" for ::1 at 2016-03-10 14:19:01 -0800
+
+ActionController::RoutingError (No route matches [GET] "/aboutme"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (71.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (111.9ms)
+
+
+Started GET "/aboutme" for ::1 at 2016-03-10 14:19:16 -0800
+
+ActionController::RoutingError (No route matches [GET] "/aboutme"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (48.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 14:19:25 -0800
+Processing by EldoradoController#index as HTML
+  [1m[36mPoint Load (1.3ms)[0m  [1mSELECT "points".* FROM "points"[0m
+  Rendered eldorado/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 168ms (Views: 157.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:19:25 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:19:25 -0800
+
+
+Started GET "/" for ::1 at 2016-03-10 14:20:27 -0800
+Processing by EldoradoController#index as HTML
+  [1m[35mPoint Load (1.4ms)[0m  SELECT "points".* FROM "points"
+  Rendered eldorado/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 174ms (Views: 153.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/bootstrap.self-d13c6b858fd1865c66a2cddbcaba20aa288c558e7c372253f550fcadd3423ba6.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/bootstrap.min.self-24a9bf4ff4e4b1e2c8dbdc54166f415004be85789fcd7bac2ba04a382176f7a1.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/eldorado.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/freelancer.self-051d638c633630c8991561bcaf23fda77b0a12ab4d4066ded8c8f850fc21b166.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/mapviewer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/application.self-710b8a073a5fd13b9089015a3d3f225978927209f65f0ee108be2bbb4f7a1589.css?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/eldorado.self-487150b21573790abeab4ee7eb1c5890b2c5bf46edf9d7e439d1242f692cd477.js?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-03-10 14:20:27 -0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-03-10 14:20:27 -0800
